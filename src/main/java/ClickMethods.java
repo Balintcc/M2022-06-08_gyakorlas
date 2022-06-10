@@ -11,9 +11,9 @@ public class ClickMethods {
 
     private final By text = By.xpath("//*[@id=\"txtAge\"]");
 
-    public String ClickMethods(WebDriver driver) {
+    public ClickMethods(WebDriver driver) {
         this.driver = driver;
-
+    }
         public void navigateToPage() {
             driver.get(url);
         }
@@ -21,9 +21,11 @@ public class ClickMethods {
             driver.findElement(checkBox).click();
         }
         public String getText() {
-            String displayedText = driver.FindElement(text).getText();
+            String displayedText = driver.findElement(text).getText();
             return displayedText;
         }
 
-    }
 }
+
+
+
